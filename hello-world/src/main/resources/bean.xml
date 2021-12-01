@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean class="com.stackroute.Customer" id="customer">
+        <property name="customerID" value="5"/>
+        <property name="name" value="tamojit"/>
+        <property name="email" value="tamo@gmail.com"/>
+    </bean>
+
+</beans>
