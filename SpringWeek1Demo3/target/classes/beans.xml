@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="addr1" class="com.stackroute.Address">
+        <property name="houseNo" value="10"/>
+        <property name="streetName" value="Marine Drive"/>
+        <property name="city" value="Mumbai"/>
+    </bean>
+
+    <bean id="addr2" class="com.stackroute.Address">
+        <property name="houseNo" value="20"/>
+        <property name="streetName" value="Jabar street"/>
+        <property name="city" value="Delhi"/>
+    </bean>
+
+    <bean id="cust" class="com.stackroute.Customer">
+        <property name="customerId" value="101"/>
+        <property name="name" value="Anjali"/>
+        <property name="email" value="anjali@gmail.com"/>
+        <property name="address">
+            <list>
+                <ref bean="addr1"></ref>
+                <ref bean="addr2"></ref>
+            </list>
+        </property>
+
+    </bean>
+</beans>

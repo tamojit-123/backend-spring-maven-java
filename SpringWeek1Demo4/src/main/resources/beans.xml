@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="com.stackroute.Customer" id="customer">
+        <!-- constructor injection by index-->
+<!--      <constructor-arg index="0" value="10"></constructor-arg>-->
+<!--        <constructor-arg index="1" value="Anjali"></constructor-arg>-->
+<!--        <constructor-arg index="2" value="anjali@gmail.com"></constructor-arg>-->
+
+<!-- constructor injection by name-->
+<!--        <constructor-arg name="customerId" value="10"></constructor-arg>-->
+<!--        <constructor-arg name="name" value="Anjali"></constructor-arg>-->
+<!--        <constructor-arg name="email" value="anjali@gmail.com"></constructor-arg>-->
+
+
+        <!-- constructor injection by ref-->
+        <constructor-arg name="customerId" value="10"></constructor-arg>
+        <constructor-arg name="name" value="Anjali"></constructor-arg>
+        <constructor-arg name="email" value="anjali@gmail.com"></constructor-arg>
+        <constructor-arg name="address" ref="addr"></constructor-arg>
+    </bean>
+
+    <bean id="addr" class="com.stackroute.Address">
+        <constructor-arg name="houseNo" value="34"></constructor-arg>
+        <constructor-arg name="streetName" value="marine Drive"></constructor-arg>
+        <constructor-arg name="city" value="Mumbai"></constructor-arg>
+    </bean>
+
+</beans>
