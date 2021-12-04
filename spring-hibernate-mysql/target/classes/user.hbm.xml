@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <!-- with this we are creating the table user in the database with the columns userid,username and email-->
+    <class name="org.example.model.User" table="USER">
+
+        <!-- id is for primary key -->
+        <id name="userId" type="int">
+            <column name="USERID"/>
+
+            <!--  generator is used to generate values automatically-->
+            <generator class="assigned"/>
+        </id>
+        <property name="userName" type="string" column="USERNAME" length="30"/>
+        <property name="email" type="string" column="EMAIL" length="30"/>
+    </class>
+
+</hibernate-mapping>
