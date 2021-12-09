@@ -1,0 +1,11 @@
+@component 
+--------------------------------------
+
+its scan applications classes with @component
+
+@controllers 
+@service
+@respository
+
+org.springframework.stereotype
+
