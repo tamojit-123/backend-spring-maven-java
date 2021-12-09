@@ -1,0 +1,6 @@
+com\stackroute\restAPI1\service\MovieService.class
+com\stackroute\restAPI1\RestApi1Application.class
+com\stackroute\restAPI1\model\Movie.class
+com\stackroute\restAPI1\service\MovieServiceImpl.class
+com\stackroute\restAPI1\controller\MovieController.class
+com\stackroute\restAPI1\repository\MovieRepository.class
