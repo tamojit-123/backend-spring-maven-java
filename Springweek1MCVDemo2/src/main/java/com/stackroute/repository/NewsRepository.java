@@ -8,17 +8,17 @@ import java.util.List;
 public class NewsRepository {
     List<News> newsData;
 
-    public NewsRepository(){
+    public NewsRepository() {
 
-        newsData=new ArrayList<>();
+        newsData = new ArrayList<>();
 
     }
 
-    public void addNews(News news){
+    public void addNews(News news) {
         this.newsData.add(news);
     }
 
-    public List<News> getNewsData(){
+    public List<News> getNewsData() {
         return newsData;
     }
 }
