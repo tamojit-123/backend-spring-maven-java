@@ -33,6 +33,289 @@ Maven Plugins
 
 https://www.jetbrains.com/idea/download/#section=windows
 
+6/12/2021
+------------
+Hibernate Annotation
+
+@Entity - put it on class . it creates a table in the database with the class name.
+@Table(name="table_name") it is applied on class.
+@Id- Primary key . it will be applied on field
+@GeneratedValue- Automatic creation of values . it will be applied on field
+@column- it will be applied on field. if we want column name should be different.
+@column(unique=true)-it will be applied on field. if we want values of column are unique.
+
+
+Website and Web app
+-------------------
+Website are the static web pages , which are hosted on a server., accessed by url
+web Application-dynamic --Perform an action based on the request
+
+
+Servlet
+---------
+Servlet are nothing, it is a Java class
+
+
+WebDevelopment
+---------------
+
+web designer- html/css/photoshop
+web component developer- servlet
+Bussiness component developer- J2EE, EJB
+
+JSP
+----- 
+Java Server Pages- looks like a html Page . HTML+java 
+During its first execution, JSP would be converted into a Servlet. this Process is known as JSP translation.
+
+
+
+
+MVC architecture
+-----------------
+
+Model (POJO)-- Perform business logic
+
+View(JSP/html)- interacting with the client, accepting input, Showing result, showing informational screen/pop-up
+
+Controller(Servlet)- validating the servlet, dispatching to component  for processing business logic, forward to a view 
+
+
+
+9/12/2021
+What is RestAPI and Wht it is Needed
+--------------------------------------
+
+Rest and restful
+----------------
+def:
+webservices:
+data format:
+protocol:
+bandwidth:
+
+https://www.devglan.com/spring-boot/spring-data-mongodb-queries
+
+
+16/12/2021(Week3)
+-----------------
+
+Day1
+----
+
+Hypervisor --> tool  ---IsoImage --installable OS is needed
+virtual machine--File---Image
+Msword--create a doc +view or edit  a existing doc
+
+two types of virtual machine
+----------------------------
+Process VM  it allows a single process to run as an application on a host machine eg. JVM
+System VM-it is fully virtualized to substitute for a physical machine
+
+
+how to work with vlabs
+----------------------
+
+go to the link https://vlabs.stackroute.in/
+give username and password , username is your emailid and password 
+click on launch lab --it takes near about 10min
+click on start lab -- it takes near about 10 min
+you will get one dashboard then click on RDP access by browser
+
+
+
+swagger
+-------
+1. add 2 dependency into any project(where you would like to implement swagger)  swagger2- documentation of api end point, swagger ui- user interface
+2. create one package swagger
+3. create a class SwaggerConfig and annotate it with @Configuration and @EnableSwagger2
+
+
+
+
+#CI
+----
+why we need git? Git is version control system
+1)local			2) client Server
+                               a) Centralized
+                               b) Distributed
+
+what is the benefit of git
+1 compile     3managing the dependency
+2 run test case			4)import the resources---build
+
+
+Maven Build Automation tool
+
+We need to automate our development process--->DevOps
+Dev- Developer
+Ops- Operational--->Deploy the application in the production environment ---server
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 first create maven project
 go to terminal
@@ -167,6 +450,210 @@ initialize beans:perform initialization task before the bean is reday to use lik
 Post initialization: perform tasks after the bean is initialized, by implementing BeanPostProcessor interface in the bean class and defining its postProcessAfterInitialization() method
 Bean ready for use: bean is ready for use and will remain in the bean factory until it is no longer required.
 Destroy beans: the bean is destroyed. If the bean implements DisposableBean interface the destroy() method is called.
+
+
+3/12/2021
+
+
+Hibernate
+-------------
+class Employee
+{
+private int id;
+private String first_name;
+private String last_name
+private long phone;
+private String email;
+//constructor
+//getter/setter
+}
+
+
+
+HQL is the object-oriented version of the SQL
+
+Dialect: Dialect is a class and a bridge b/w java jdbc types and sql types which containd mapping b/w java language data type and 
+database datatype
+the dialect specifies the type of database used in hibernate so that hibernate generate 
+appropriate type of SQL statements
+
+
+
+
+7/12/2021
+---------
+
+1. create maven web-app archetype application
+2. add dependency (spring webmvc, jstl/javax.jstl, javax.servlet.api)
+3. do code in web.xml i.e. deployement descriptor  , servlet tag and servlet mapping
+4. create one <servlet-name>-servlet.xml file inside WEB-INF folder
+5. create one folder inside WEB-INF with any name and place your all the web pages inside it.
+
+
+
+
+
+Model- it is an interface. it defines a holder for model attribute and designed for adding attibutes to the model.
+ModelMap- it is a class. implementation of Map for use when building model data for use with UI
+
+
+spring+hibernate demo
+----------------------
+1. Add dependencies
+hibernate-core
+mysql-connector
+spring-webmvc
+javax.servlet.api
+jstl
+spring-orm
+commons-dbcp
+
+2. Create configuration files- (ViewResolver+ DispatcherServlet+Hibernate)
+3.After completing the code of all the layers (model,controller,dao)
+4. configure Tomcat Server
+5. run our application
+
+
+
+
+@SpringBootApplication is combination of three annotation @Configuration,@EnableAutoConfiguration,@ComponentScan
+
+class Product{}
+class Customer{}
+
+class Order
+{
+Order(Product p,Customer c)
+{
+
+}
+}
+
+
+
+
+AOP(Aspect Oriented Programming)
+-----------------------------------
+-Model/entity
+-dao
+-repository
+-controller
+-service
+
+Cross cutting Concern
+---------------------
+-security
+-Transaction
+-logging
+-caching
+
+
+Aspect
+------
+this a module with the specification of the cross cutting concern
+
+JoinPoint(event)
+---------
+it is point in the application.
+for e.g. exception handling, Method execution
+
+
+Advice(event handler)
+-------
+it is related with join point.
+what would be the action taken when the join point occurs . it is a method.
+
+
+
+
+Point cut
+---------
+
+expression which is going to be matched with join point to check whether the advice needs to be executed or not.
+
+
+Target Object
+-------------
+the object on which the advice will be applied 
+for e.g. if we are implementing logging using AOP for all the methods of any layer class then that class is our target object
+
+
+
+types of advice
+---------------
+1. Before 
+2. After 
+3. AfterReturning
+4. Afterthrowing
+5. Around
+
+
+JWT Token looks
+-----------------
+it has 3 parts
+
+header-it consists of 2 part, type of token, which is JWT and the signing algorithm
+payload-it contains the claims. claims are the statement about the entityand additional data. 3 types of claims registered,public and private
+		Registerd claims:these are a set of  predefined claims which are not mandatory byt recommended to provide a set of useful
+				issuer,expiration time, subject, audience
+		public key:these are can be defined at will by those using JWT
+
+		private key:these are the custom claims created to share the information b/w parties that agree on using them.
+
+Signature:to create signature part you have to take encoded header, encoded payload, a secret, the algorithm specified in the header and in sign
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
