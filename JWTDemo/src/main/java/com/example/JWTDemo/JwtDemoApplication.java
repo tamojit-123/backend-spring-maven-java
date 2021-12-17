@@ -9,19 +9,18 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class JwtDemoApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		SpringApplication.run(JwtDemoApplication.class, args);
+        SpringApplication.run(JwtDemoApplication.class, args);
 
-	}
+    }
 
-	@Bean
-	public FilterRegistrationBean jwtFilter()
-	{
-		FilterRegistrationBean  filterRegistrationBean=new FilterRegistrationBean();
-		filterRegistrationBean.setFilter(new JwtFilter());
-		filterRegistrationBean.addUrlPatterns("/api/v1/*");
-		return filterRegistrationBean;
-	}
+    @Bean
+    public FilterRegistrationBean jwtFilter() {
+        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+        filterRegistrationBean.setFilter(new JwtFilter());
+        filterRegistrationBean.addUrlPatterns("/api/v1/*");
+        return filterRegistrationBean;
+    }
 
 }

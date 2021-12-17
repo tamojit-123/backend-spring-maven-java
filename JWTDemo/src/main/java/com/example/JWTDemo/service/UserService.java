@@ -8,6 +8,7 @@ import java.util.List;
 public interface UserService {
 
     public User saveUser(User user);
+
     public User findByUsernameAndPassword(String username, String password) throws UserNotFoundException;
 
     List<User> getAllUser();

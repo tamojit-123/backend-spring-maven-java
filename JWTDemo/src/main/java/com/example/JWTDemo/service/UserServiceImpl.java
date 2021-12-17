@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     UserRepository userRepository;
 
@@ -23,10 +24,9 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User findByUsernameAndPassword(String username, String password) throws UserNotFoundException{
-        User user= userRepository.findByUsernameAndPassword(username,password);
-        if(user==null)
-        {
+    public User findByUsernameAndPassword(String username, String password) throws UserNotFoundException {
+        User user = userRepository.findByUsernameAndPassword(username, password);
+        if (user == null) {
             throw new UserNotFoundException();
         }
         return user;

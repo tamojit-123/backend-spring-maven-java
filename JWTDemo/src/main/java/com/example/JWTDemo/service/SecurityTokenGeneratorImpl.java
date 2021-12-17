@@ -10,17 +10,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class SecurityTokenGeneratorImpl implements SecurityTokenGenerator{
+public class SecurityTokenGeneratorImpl implements SecurityTokenGenerator {
     @Override
     public Map<String, String> generateToken(User user) {
 
-        String jwtToken=null;
-        jwtToken=Jwts.builder().setSubject(user.getUsername()).setIssuedAt(new Date()).signWith(SignatureAlgorithm.HS256,"secret_key").compact();
-        Map<String,String> map=new HashMap<>();
-        map.put("token",jwtToken);
-        map.put("messsage","Authentication successful");
+        String jwtToken = null;
+        jwtToken = Jwts.builder().setSubject(user.getUsername()).setIssuedAt(new Date()).signWith(SignatureAlgorithm.HS256, "secret_key").compact();
+        Map<String, String> map = new HashMap<>();
+        map.put("token", jwtToken);
+        map.put("message", "Authentication successful");
         return map;
-
 
 
     }
